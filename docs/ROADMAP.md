@@ -9,10 +9,10 @@ Single-File-HTML v0.5, siehe [CHANGELOG](CHANGELOG.md).
 - F-06 Echte Testdateien einsammeln, Mapping verifizieren – **teilweise**: Fuji X100VI (RAF, JPEG hochkant) und X100F (JPEG) geprüft; Rest zurückgestellt (s. Phase 3)
 - Weiterhin als Single-File nutzbar
 
-## Phase 2 – Projektstruktur und PWA
+## Phase 2 – Projektstruktur und Auslieferung
 - ✅ Automatisierte Tests in GitHub Actions (alle Browser-Tests in Chromium, WebKit, Firefox bei jedem Pull Request)
-- Code modularisieren (`exif/`, `render/`, `export/`, `ui/`), Build (z. B. Vite)
-- PWA: Manifest, Service Worker (offline), installierbar auf macOS, Windows, Linux, iOS, Android
+- Code modularisieren (`exif/`, `render/`, `export/`, `ui/`), Build (z. B. Vite) – bei Bedarf, wenn der Single-File-Prototyp zu unübersichtlich wird
+- ⏸ PWA (Manifest, Service Worker, installierbar) – zurückgestellt, die Webseite genügt vorerst ([ADR 0001](adr/0001-auslieferung-pwa-statt-desktop.md))
 - ✅ Hosting: GitHub Pages (https://jkstzs99dr-pixel.github.io/photo-frame-studio/), automatisch nach grünen Tests auf `main` ([ADR 0003](adr/0003-oeffentlich-deutsch-mit.md))
 
 ## Phase 3 – Komfort (v1.x)
@@ -28,7 +28,7 @@ Single-File-HTML v0.5, siehe [CHANGELOG](CHANGELOG.md).
 
 | Thema | Optionen | Stand |
 |---|---|---|
-| Auslieferung | HTML bleibt · PWA · Desktop | Empfehlung PWA, [ADR 0001](adr/0001-auslieferung-pwa-statt-desktop.md) vorgeschlagen |
+| Auslieferung | HTML bleibt · PWA · Desktop | **entschieden: Webseite auf GitHub Pages** (Single-File), PWA zurückgestellt; nur browser-taugliche Features ([ADR 0001](adr/0001-auslieferung-pwa-statt-desktop.md)) |
 | Sichtbarkeit | privat · öffentlich | **entschieden: öffentlich**, neues Repo mit frischem Start; altes Repo privat als Archiv ([ADR 0003](adr/0003-oeffentlich-deutsch-mit.md)) |
 | Lizenz | z. B. MIT, GPL-3.0, proprietär | **entschieden: MIT** ([LICENSE](../LICENSE), ADR 0003) |
 | Sprache | nur DE · DE + EN | **entschieden: nur DE** (ADR 0003); F-35 ohne Termin |

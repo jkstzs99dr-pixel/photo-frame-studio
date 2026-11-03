@@ -2,6 +2,9 @@
 
 Entstehung des Prototyps (alle Schritte am 2026-11-02).
 
+## Entscheidung Auslieferung
+- Webseite auf GitHub Pages genügt vorerst; PWA zurückgestellt, Desktop-Features (Gruppe D) bleiben liegen. Nur browser-taugliche Features ([ADR 0001](adr/0001-auslieferung-pwa-statt-desktop.md) akzeptiert)
+
 ## Phase 2 – GitHub Pages
 - Prototyp online unter https://jkstzs99dr-pixel.github.io/photo-frame-studio/
 - Workflow `.github/workflows/pages.yml`: veröffentlicht nur nach grünem Test-Lauf auf `main`, genau den getesteten Stand; ausgeliefert wird nur die App

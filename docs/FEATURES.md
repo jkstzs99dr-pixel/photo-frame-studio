@@ -65,6 +65,8 @@ Status: ✅ umgesetzt · 🟡 teilweise · ⬜ offen
 
 ### D – nur Desktop
 
+Zurückgestellt: Es werden vorerst nur browser-taugliche Features umgesetzt ([ADR 0001](adr/0001-auslieferung-pwa-statt-desktop.md)).
+
 | ID | Feature |
 |---|---|
 | D-01 | Echtes RAW-Entwickeln in voller Auflösung (z. B. LibRaw) |
