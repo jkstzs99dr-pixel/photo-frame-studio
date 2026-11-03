@@ -12,6 +12,10 @@ Ein schnelles Werkzeug, um Fotos fürs Veröffentlichen aufzubereiten: Es setzt 
 
 ## Schnellstart
 
+**Online:** https://jkstzs99dr-pixel.github.io/photo-frame-studio/ öffnen – fertig. Die Bilder bleiben trotzdem auf deinem Gerät, es wird nichts hochgeladen.
+
+**Offline / als Datei:**
+
 1. [`prototype/rahmen.html`](prototype/rahmen.html) herunterladen.
 2. Per Doppelklick im Browser öffnen (Safari, Chrome, Edge oder Firefox, aktuelle Version).
 3. JPGs oder RAWs ins Fenster ziehen.

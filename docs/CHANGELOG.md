@@ -2,6 +2,11 @@
 
 Entstehung des Prototyps (alle Schritte am 2026-11-02).
 
+## Phase 2 – GitHub Pages
+- Prototyp online unter https://jkstzs99dr-pixel.github.io/photo-frame-studio/
+- Workflow `.github/workflows/pages.yml`: veröffentlicht nur nach grünem Test-Lauf auf `main`, genau den getesteten Stand; ausgeliefert wird nur die App
+- Bilder werden weiterhin nur lokal im Browser verarbeitet (ADR 0002); der Prototyp lädt nichts von außen nach
+
 ## Phase 2 – Automatische Tests auf GitHub
 - GitHub Actions (`.github/workflows/tests.yml`): bei jedem Push auf `main` und jedem Pull Request laufen alle Browser-Tests, je ein Job für Chromium, WebKit und Firefox
 - `package.json` mit fester Playwright-Version und `npm test` (`tests/run-all.mjs`), `tests/requirements.txt` für Pillow
