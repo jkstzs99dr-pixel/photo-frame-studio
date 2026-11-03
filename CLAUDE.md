@@ -52,8 +52,8 @@ Fachliche Details zu Tags und Werten: [docs/EXIF-MAPPING.md](docs/EXIF-MAPPING.m
 ## Geplante Richtung
 
 - Repo ist **öffentlich** (MIT), Oberfläche und Doku nur **Deutsch** ([ADR 0003](docs/adr/0003-oeffentlich-deutsch-mit.md)). Commits mit der anonymen GitHub-Adresse, keine privaten Mailadressen.
-- Empfohlen (noch nicht final entschieden): **PWA im GitHub-Repo**, später optional Tauri-Desktop-Build. Siehe [ADR 0001](docs/adr/0001-auslieferung-pwa-statt-desktop.md).
-- Bei Modularisierung: Logik in testbare Module trennen (`exif/`, `render/`, `export/`, `ui/`), Build z. B. mit Vite. Der Single-File-Prototyp bleibt bis zur Feature-Parität erhalten.
+- Auslieferung: **Webseite auf GitHub Pages** (Single-File `prototype/rahmen.html`), PWA und Desktop vorerst nicht. **Nur Features aufnehmen, die vollständig im Browser umsetzbar sind** (Backlog-Gruppe „D – nur Desktop“ bleibt liegen). Siehe [ADR 0001](docs/adr/0001-auslieferung-pwa-statt-desktop.md).
+- Bei späterer Modularisierung (nur bei Bedarf): Logik in testbare Module trennen (`exif/`, `render/`, `export/`, `ui/`), Build z. B. mit Vite. Der Single-File-Prototyp bleibt bis zur Feature-Parität erhalten.
 - Backlog mit Prioritäten: [docs/FEATURES.md](docs/FEATURES.md). Phasen: [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Tests
