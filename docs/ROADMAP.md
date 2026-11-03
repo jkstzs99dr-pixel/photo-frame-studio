@@ -10,7 +10,8 @@ Single-File-HTML v0.5, siehe [CHANGELOG](CHANGELOG.md).
 - Weiterhin als Single-File nutzbar
 
 ## Phase 2 – Projektstruktur und PWA
-- Code modularisieren (`exif/`, `render/`, `export/`, `ui/`), Build (z. B. Vite), automatisierte Tests in GitHub Actions
+- ✅ Automatisierte Tests in GitHub Actions (alle Browser-Tests in Chromium, WebKit, Firefox bei jedem Pull Request)
+- Code modularisieren (`exif/`, `render/`, `export/`, `ui/`), Build (z. B. Vite)
 - PWA: Manifest, Service Worker (offline), installierbar auf macOS, Windows, Linux, iOS, Android
 - Hosting: GitHub Pages (Repo ist öffentlich, [ADR 0003](adr/0003-oeffentlich-deutsch-mit.md))
 

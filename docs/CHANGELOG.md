@@ -2,6 +2,11 @@
 
 Entstehung des Prototyps (alle Schritte am 2026-11-02).
 
+## Phase 2 – Automatische Tests auf GitHub
+- GitHub Actions (`.github/workflows/tests.yml`): bei jedem Push auf `main` und jedem Pull Request laufen alle Browser-Tests, je ein Job für Chromium, WebKit und Firefox
+- `package.json` mit fester Playwright-Version und `npm test` (`tests/run-all.mjs`), `tests/requirements.txt` für Pillow
+- README: Testanleitung vereinfacht
+
 ## v1.0-rc4 – Veröffentlichung vorbereitet
 - Entscheidungen festgehalten in ADR 0003: öffentliches Repo mit frischem Start (altes Repo bleibt privat als Archiv), nur Deutsch, MIT-Lizenz (`LICENSE`)
 - Wasserzeichen-Text standardmäßig leer (vorher „Peter Tischer“); Platzhalter für Autor/Copyright ohne echten Namen
