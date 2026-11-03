@@ -13,7 +13,7 @@ Single-File-HTML v0.5, siehe [CHANGELOG](CHANGELOG.md).
 - ✅ Automatisierte Tests in GitHub Actions (alle Browser-Tests in Chromium, WebKit, Firefox bei jedem Pull Request)
 - Code modularisieren (`exif/`, `render/`, `export/`, `ui/`), Build (z. B. Vite)
 - PWA: Manifest, Service Worker (offline), installierbar auf macOS, Windows, Linux, iOS, Android
-- Hosting: GitHub Pages (Repo ist öffentlich, [ADR 0003](adr/0003-oeffentlich-deutsch-mit.md))
+- ✅ Hosting: GitHub Pages (https://jkstzs99dr-pixel.github.io/photo-frame-studio/), automatisch nach grünen Tests auf `main` ([ADR 0003](adr/0003-oeffentlich-deutsch-mit.md))
 
 ## Phase 3 – Komfort (v1.x)
 - F-10 Mehrfachausgabe · F-11 Rahmen-Stile · F-12 Text-Vorlagen · F-13 Logo-Wasserzeichen

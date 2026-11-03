@@ -1,0 +1,42 @@
+# Veröffentlicht den Prototyp auf GitHub Pages – nur wenn der Workflow „Tests“ auf main grün war.
+# Ausgeliefert wird ausschließlich die App (prototype/rahmen.html als index.html), keine Tests oder Doku.
+name: GitHub Pages
+
+on:
+  workflow_run:
+    workflows: [Tests]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # genau der Stand, der getestet wurde
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - name: Seite zusammenstellen
+        run: |
+          mkdir -p _site
+          cp prototype/rahmen.html _site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
