@@ -1,0 +1,46 @@
+# Browser-Tests für den Prototyp bei jedem Push auf main und jedem Pull Request.
+# Jeder Browser läuft als eigener Job, damit ein Fehler sofort dem Browser zugeordnet ist.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    name: ${{ matrix.browser }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit, firefox]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Werkzeuge installieren (Pillow, exiftool)
+        run: |
+          pip install -r tests/requirements.txt
+          sudo apt-get update -q
+          sudo apt-get install -y -q libimage-exiftool-perl
+          exiftool -ver
+      - name: Node-Abhängigkeiten
+        run: npm ci
+      - name: Browser installieren
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Testdateien erzeugen
+        run: python tests/fixtures/make_fixtures.py
+      - name: Tests
+        run: npm test
+        env:
+          BROWSERS: ${{ matrix.browser }}

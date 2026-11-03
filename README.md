@@ -61,19 +61,25 @@ CLAUDE.md                   Projektkontext für die Weiterentwicklung mit Claude
 
 ## Tests ausführen
 
-Voraussetzungen: Python 3 mit Pillow, Node.js mit Playwright (Chromium; für Safari/Firefox zusätzlich WebKit/Firefox), exiftool.
+Die Tests laufen bei jedem Pull Request automatisch auf GitHub (Chromium, WebKit/Safari-Engine, Firefox), siehe Reiter **Actions**.
+
+Lokal (einmalig: Node.js, Python 3 und exiftool installieren, z. B. `brew install node python exiftool`):
 
 ```bash
-python3 tests/fixtures/make_fixtures.py      # erzeugt Testdateien in tests/fixtures/out/
-node tests/e2e/smoke.mjs                      # prüft Prototyp im Headless-Browser
-node tests/e2e/exif.mjs                       # prüft Exif in den Ausgabedateien mit exiftool
-node tests/e2e/copyright.mjs                  # prüft Autor/Copyright (Exif, IPTC, XMP)
-node tests/e2e/gps.mjs                        # prüft den GPS-Schalter
-node tests/e2e/ratio.mjs                      # prüft das Zielseitenverhältnis
-node tests/e2e/presets.mjs                    # prüft Presets inkl. Export/Import
-node tests/e2e/mapping.mjs                    # prüft das Mapping mit Werten aus echten Kameradateien
-BROWSER=webkit node tests/e2e/exif.mjs        # dasselbe mit der Safari-Engine (oder BROWSER=firefox)
+npm install                                    # Playwright installieren
+npx playwright install chromium webkit firefox # Test-Browser herunterladen
+python3 -m pip install -r tests/requirements.txt
 ```
+
+Dann bei jedem Testlauf:
+
+```bash
+python3 tests/fixtures/make_fixtures.py        # erzeugt Testdateien in tests/fixtures/out/
+npm test                                       # alle Tests in allen drei Browsern
+BROWSERS=webkit npm test                       # nur ein Browser
+```
+
+Einzelne Tests: `node tests/e2e/<name>.mjs` (smoke, exif, copyright, gps, ratio, presets, mapping), anderer Browser mit `BROWSER=webkit` bzw. `BROWSER=firefox`.
 
 ## Lizenz
 

@@ -58,6 +58,7 @@ Fachliche Details zu Tags und Werten: [docs/EXIF-MAPPING.md](docs/EXIF-MAPPING.m
 
 ## Tests
 
+- `npm test` (Skript `tests/run-all.mjs`) führt alle Tests in Chromium, WebKit und Firefox aus; `BROWSERS=webkit npm test` schränkt ein. Dieselben Tests laufen per GitHub Actions (`.github/workflows/tests.yml`) bei jedem Push auf `main` und jedem Pull Request, je Browser ein Job. Neue Testdateien in `tests/run-all.mjs` eintragen.
 - `python3 tests/fixtures/make_fixtures.py` erzeugt synthetische Testdateien (Basis-JPEG, Sony-JPEG mit MakerNote, ARW-artige TIFF-Datei mit Vorschau-JPEG und Orientierung 6, RAF-Attrappe).
 - `node tests/e2e/smoke.mjs` lädt den Prototyp in Headless-Chromium und prüft Textzeilen, Maße, Modi und Downloads.
 - `node tests/e2e/exif.mjs` prüft das Exif der Ausgabedateien unabhängig mit `exiftool` (inkl. `-validate`). Mit `BROWSER=webkit` bzw. `BROWSER=firefox` in den anderen Engines ausführen – Safari schreibt beim Canvas-Export eigenes Exif und leeres IPTC.
