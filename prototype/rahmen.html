@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foto-Rahmen</title>
+<link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2214%22%20fill=%22%231f5f4a%22/%3E%3Crect%20x=%2211%22%20y=%229%22%20width=%2242%22%20height=%2246%22%20rx=%222%22%20fill=%22%23fff%22/%3E%3Crect%20x=%2215%22%20y=%2213%22%20width=%2234%22%20height=%2227%22%20fill=%22%236f9a86%22/%3E%3Cpath%20d=%22M15%2040V31l9-8%208%209%206-5%2011%209v4z%22%20fill=%22%231f3d31%22/%3E%3Ccircle%20cx=%2241%22%20cy=%2220%22%20r=%223%22%20fill=%22%23f3e7b5%22/%3E%3Crect%20x=%2219%22%20y=%2245%22%20width=%2226%22%20height=%222.4%22%20rx=%221.2%22%20fill=%22%23444%22/%3E%3Crect%20x=%2224%22%20y=%2249.5%22%20width=%2216%22%20height=%221.8%22%20rx=%22.9%22%20fill=%22%23999%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAQAElEQVR4AeydCXQUx5nHvxoNkhGXjbFNAI0c88DYu7aDSfx466zDvgSEZIztYJ7BxhL2S8zbkJiNIT7WL17s2A558bHgsG+Xl7WR8LWRSQg2OhCHJBCI+z4NWBoJJEAghC4kzXRtfaMDaaSRuqd7erq6v3ldmj6q6vvq//2mVF3VGrkgiq+Rc1O+50lNfkKkX3nSUt4R6WOxn5OYmnwgMS35QmJaCqdkRQ1EbAIxSskWcfpIxOttkX4pYjUDYxpFpMBcoGfOjE14ZmpSYmrKck9astfNYR9jLFOkZQzgVZHmiv0kYOxeAHYL0MuiCojYBGIEUwHYsyJe/y7ShwDwJcZUxLc0MS3lT545KZPh+Qn9xHnTtogD7Xnq4Zs8qVPTElNTVnv6111yuVw5wOAXDFiCaa0kQ+YqwMAjDM5nMbA+senWi6IX/zwhLWU2siDOR3SLGNAjZj8yzJOWspS5eSVjrpXA4KeMsYERbQ1VbkEF2BAANssF8Bmy4ElN/s/hzyZH7LevsAOGvm6ZOWmgJy35DXc/37cM4AUBcqyhBqgyeRVgECs6tQVxCjstGHl92HPTBxndGJdhFYrxseeZ5H+Lj+9/hgF7XThOvbFh4hpRkaXqGCQYeWOAv+W06LF/BYIdo7zTD/RicHlwjNy//iRzsQ+AbuaAXmoVYLeIjm9ZYnzdCcHQHBAsgc6XLqDxV4bnTEouax0jJ+r0hYo7VgF2u2BoledMctbQp5MH65EhbKC/81RK4gC/bydj8BM9DlBZUqBdAcZY0kA3bE98Zsp3289pfQ8LaJw87+fme4SxcSLRRgoYpgADdjdn7p2Jc5LuD6dSzUAnpE2dHsOhSHyabg7HIJUhBfpSgDEYxmNitoxKnfp4X3mDr2sCWswrv8o4W8MA4oMrkvmYfLeeAsiYC9jqxNSU32jxzqU2c0Ja8hSR9y0mXuKdNlIg4goI1ET/CUtGzU0RS+zqzKkCetTcyWNcHDLFp0ZVfnWmKRcp0LcCyFwM51+MTE0Z23dugD4BxSXsGKXf18CYrukUNc5QHlKgZwXYEDfwtWqm9HoHetIktzvWtwYYqPp09OwMnSUFDFCAsTsHxcAXIJjsrbZegfZ44v/EgD3YWwV0jRQwTQHGkpHJ3uyFBBoH4ozBvN4K0zVSwGwFGIN5yGYouz0DLdbUXZy/F6oQnScFoqmAS4E/hrLfI9AJp1NSxVDj7lCF6DwpEE0FRC/9jwlzp87qyYfuQM+cGetisBjoRQpYWAEXZ7+H5OS4YBe7Ae25ofZFMatBT84FK0XHFlOA3e4Zxn8d7FQXoHHOmTH2anAmOnaAAhI2EVkN/nOuLkC7+/nfAlpAkTC0DnVZsBrrZ7/r3PoOoBOfefguceFnItFGCsikwM/w2fx2hzuAVoD/iDGIgSi9vj/mbnjx8TmwcuGb8MUrSyhJoAHG6tePPw0YuyhhIwYUEOOOgeR2+x1AC5hVP9HUXtiI98HxA+APzy2AL1/7I7zw6GyYdM8EmDjuHkoSaICxWvDoU4HYLXn2BcBYGsGE1jo6s9sK9PMT+jHg/6K1Ir35GWOQvvB38ORD+GSq3tqofDQVmPWjJBHLN0WPyUx3gzE+qf0bmgJAj2q+7cfCk8FmezIveQaMH32n2Wa12qP8KhUYP3ocPDflUZW5jczGhgQYFlUGgBZLiY+JfdO3pAn/ZLpNMhhZBaY98FBkDYSovZ3hANAAfHqIfBE7zRiDcaNo/SZiAkep4jtFTBkzf9gBjD+CTXaNnJs8kTH2HTwwMw3qHw/9424w0yTZMkGBeBFTjK0JprqYYMBGIMsul599r8sVOiAFJFUAWXYxBsMl9Z/cJgW6KMBAuRHH0OED3aU6OiAFoqwAY8MF0PzGKLtB5kkBoxQY7mIAUvTQu08dgfxDuyhFQQPU3ijiIlyPPEOOTQeKYU3xBkpR0AC1jzCIhlTPgA13iRVCGnIYIidVEnUFxASHSyyqENBRj4T1HZDDQ45DDtbt77LkcJ68JAWCFWBxoocOPknHpIC8ChDQ8saOPO9BAQK6B1HolLwKENDyxo4870EBAroHUbSdotxWUoCAtlI0yBfdChDQuiW0RgU3xcdCwk3xEOd2dkid3XprsBi2F3cNHwK/+OcxsDjlXlj447tg3g/HwG+T74FXpvwDzHnguzCkf7+w65a1IAEtYeTcMQym3zsSnv7B7TDixnjA487NGBjnhnG3DYb5D40FhL7zNbvvE9CSRfjWQTeIXnksPJA4rE/P42PdAegfuWdkN+j7LCxphogCLakmlnZ7/KgbAaHW4uT3PUNhcJwzhh8EtBYyopzXMzQefjj6Vs1exLhcMGO8B5jmkvIVIKAlitn4UUOBsfCwTBw6AEaJWRCJmhuWqwR0WLJFp9Dwwf11GdZbXpdxkwoT0CYJrdcM9su3DdL3pO+IIfo+EHrbYEZ5AtoMlQ2wcfOAOIh16/u24wj20Aa00JgqCGhjdIx4LVX1TVDX1KLLTsmlWl3lZShMQMsQpTYfK2oa2/bCe/NW6ysfnlVzSxHQ5uqty9rO0sthl69pbIYzVdRDhy0gFTRegWOVNfDNhathVfz14XPQ5FPCKitTIeqhZYqW8HWdANPn52JP/YYfAvwwqC8hb04COtKxM7h+vDksPH1Bda0I/7oj51Tnlz0jAS1hBDedqIR3cg7DvvLqkN43tvhhzYEyWJx1EKrqmkLms9sFArpTRFuamzsdWXu3QQC7ep8Xlqw/Ap/vLoWi0xcBhxV5xyrgz9tOwx/yjsBub/g3kdZufWjvCOg2bcrOlELu6nVw5VLoXq8tq6Xe6pp8cKTiCmQfPQef7iqBglMXoORSHeBQw1KOmuQMAS2EPnHoOOwp2gk+nw+KNhRCfW2dOEubjAo4GmjOOezfsQeO7T/UETscdmxdnw/NTc4Zd3Y03gY70QQ6qvL5/X7Ykb8NSk6e6eZHY0MjFOUVBnrsbhfphKUVcCTQzU3NgL1wZXno6aya6itQvGkrcEXbnK+lo+0A5xwHdENdPRTmbITqqr5nAKrOX4Q923Y6AAP7NNFRQNdcvgIF2Ruh7qr6m77yb71wdP9h+0Tc5i1xDNAXKs7DltzN0HRN+83eyUPHoPTUtzZHwR7NcwTQOMe8feMWXTd5+7bvhvNnK+0RddNbYZ5B2wPdPseMU3R6Zd2RX6Rq7K3XDpUPXwHbAo0AB88xhy9Ta0lFUWAbLby0imHRn7YEurc5Zr1xaGlpCUz5XWu8prcq1eV9LT7YsbkIjh88qrqMUzPaDmg1c8x6g9268FKga0yu1oeG+obAzEyFmDM/fuAIFAuwcYlebXmn5bMV0FrmmPUGurbmKuDCCw5D9NYVqjzOlW/+Og/QVnseXAwqyNoICHr7OXq/roBtgA5njvm6DOHt4cLL7i07wivcVirUG87MFOZuAny2JDgPAo6gX7pQFXzJ8ce2AFrPHLNeAs55y+HI3oN6q+kojzezh/ccCDz919uyO4K+dX0BnDl5uqMs7QBIDzT2ZHrnmPWC8M2RE4YsvODNHw5jTh09qcolzhU4uGMv7N22CyI59FHljEUySQ20kXPMeuOBCy8VZaEfduqrfhwT52dtgPPntC/eeE+XBGZe6JFXSXto3sNzzH0BY8b1nYXbwlp4wbHwZnHzV3c1/O/NuHzxEmAdV6/UmNFUy9qQroeO5Byz3ijhmBcXXmpr1IOJz4hsXZ/f482fVn9wOhFnQCrKzmotapv8Fga6u8ZmzDF3t6rtDC68FOXlQ18LL1ysOh7ctQ9wqIK/cbRZCZ0bP/DF+dsCTwgaWW9oi9a6Ig3QteLXsdrnmKMtMcJclFcACHdPvrQ0t8C2jVvgzPFTPV3WfY6JGvAJQbzBxBtNceiYTRqg12fnanqOOdoRrG1beAn2o762PrDyd7FS/ZfFBNeh9hhvMAtyNgLaVFtG9nzSAO3z+aXTGm/2dhZsh/Zf/bgQk5+VJz6Y6sfYehtde+UqoE20rbcuGcpLAzQDOf+2L7DwIhZKAjd/YmyNww2zwUCbRRsK4PSxb8w2bbo9aYDmgCND0/UxxOApARLe/EXzM8kVDod2729dhPFb7FtIDVG5tRJpgG51l37qVQAXYfAZkaZr5j3+qtdnLeUJaC1q2SQvft0ZLsJcuVxtkxZdbwYBfV0LR+3h1GJh9iY4W1pmq3YT0LYKp7bG4ANNuwqLA08Lts/EaKvBerkJaOvFxHSP8GlBXITB2RDTjRtskIA2WFCDqzOtuvPnKgPz1Vq+hMc05zQYIqA1iGX3rLiimC8WfvAPJmRtKwEta+Qi5Dc++4HPmeAwJEImIlotAR1ReSWtnPPAjeLurTtAkWwRhoCWlDkz3MYvqsRFmPq6ejPMGWKDgDZERvtWgoswuetypGmgvEBLI7H8jrb4fNI0goCWJlTkqBoFCGg1KlEeaRQgoKUJFTmqRgECWo1KlEcaBQhoaULlXEe1tJyA1qIW5bW8AgS05UNEDmpRgIDWohbltbwCBLTlQ0QOalFAGqCnJ02FhylFRQPUXgtU0cwrDdD/Me9FWP7aO5S6aGCOHqh9NCHVYlsaoLU0ivI6VwEC2rmxt2XLCWhbhtW5jSKgnRt7W7acgLZlWJ3bKNsC7dyQOrvlBLSz42+71hPQtgupsxtEQDs7/rZrPQFtu5A6u0EEtLPjb4fWd2kDAd1FDjqQXQFbA713717IzMyEjIwMSkID1AI1kR3a3vy3LdALFiyAl19+GVasWAGrVq2iJDRALVCT+fPn98aE1NdsCXRhYSEcPXpU6sBE0vmTJ09CcXFxJE1ErW5bAl1SUhI1QWUxjFDL4qsWP20JtBYBbJ3XgY2zJdCjR492YCi1NXns2LHaCkiS25ZAP/jggzB58mRJQmC+m0lJSTBx4kTzDZtg0ZZAo24vvfQSfPjhh/Duu+9S6qTB8uXLYdGiRSiRLZNtgcZojRs3Du677z5KnTSw61AD443J1kBjAyk5SwGnAu2sKDuotQS0g4LthKYS0E6IsoPaSEAHBbuyshLy8/Phq6++snRCH9HXIPcdf0hAd0KgqqoK1q5dC7gsXFFRAVZO6CP6Wl1d3akFtCuA5jUkQ6sC5eXlrTsS/SwtLZXI20i7ymtcwKGyixkHHwwcOFC61svoc8RE5qxE9NAENLS9EhISYMiQIW1H1n9DXz0ej/UdNclDDrzSxQHoWUtofcXFxcGTTz4Js2bNgmnTplk6zZ49O+BrbGxsq/P0ExWopB4aZQhKgwcPhhEjRlg6DRo0KMhrOhQKCKBpDC10oM0WCgiWXTyG002hLaKpvRF2K4Esu/yg7Ldbw6g9zlQAWXadW7n+OHB+wmwJahsboLHpmtlmyV6EFbjW3AQY2wib6V69YBhZxptCMRUNOd1zRPYM5xyOl9OiQGRVNr/2Y2Ulon8Uc2cmmxYW16DJANCKi5kONBr/dHMWvlGykQLRiqni4gGGEwtUBwAABDJJREFUA0CX1w/YBGD+EviXWzdA8fGDNgqns5uy48RhwJiarwKvKY+9WIR2A0BDZmazGAEECMeTZqbnl70FXxTkmmlShS3KolWB/ytcDz9f+qbWYobkD7C7Yk8LVtYKtNjjPDrDjqsN9fDKx8vgibd/A0v//hnkH9ojeu1DlI5bXwOM1bK/fw4/fWsRvPzRUsBYCpRM37iLB8bPaPg60MyVJ27UOJ6MRtr9zVH44G+fwtz3XodZS16hJIEGGKv3//YJ7D11LBrIBGwis/UtrONmrAPo8oyvzwKwFUAvUkAqBdiKy59mX213uQNoPNHEfa+Lm0OaHEYxKEmgAL/WHMN/29nRLkCfX7X+AuewtHMG2icFrKoAslr5cfbFzv51ARov1PnhHdFLh/wrFsxDiRSIugKcX21w93s72I9uQON4hCt8SXBGOiYFrKSAuBn8fdVHa2uDfeoGNGbwVrEPxPt5kWgjBSyoAC9pY7Sbbz0CDdnZTYoCi4FepIAFFVAU9gYy2pNrPQMtcpatyvofMSmdJ3ZpIwUsowAyKdhMD+VQSKBFAd4Q454BnNPDFkIMB27Wa7JgMcCkmLUI5VxvQAMOuv0QkyKmR6pCVUDnSQEzFBA3geXIIjLZm71egcaCuILod/FHBNSNeEyJFDBbAWRPcbEUZLEv230CjRWcXZldzLgyR4xfFDymRAqYpQAyh+yVr8w6pMamKqCxotJVOX8FRXkN9ymRAqYpIJgLsKfSoGqgsT7vqpwlCiiPihvFjodB8DwlUsBwBcRKIIB/GjKnpW5NQGPFZek5a1sU/oC40XTuNy6hEJQipwCHUh+wH5Sm567TakQz0Gjg3Cc5J/xuZYIYrG/AY0qkgGEKcL7J389//9mMrJPh1BkW0Gio/H9zL3vvyEriwP8bjymRAnoVEB3kn0vvyJ6MbIVbV9hABwwuBsWbnv2vHJSfCGcOB87RD1JAowLIDjLkzcj6OQimQMdLH9Bthr3pORu9d2TdJ+b0nhPOnW07TW+kQO8KcPhWMPMUsoMM9Z5Z3VVDgA6YEp+ssvSsj5XG6jEKh4UCbPpfCQFh6EewAq1s8EWljQPGCWY+B8EOGPQyDuhWh6A8c3tjWUbW++Bjo4HD+yI1t12iN6crwAFZ+ADZKE3Pfg+/PsNoSQwHut1B72frqkszshZyHxvOgadxgNWc87r26/TuDAUCMefwV86VuchCaXrWi8hGpFofMaDbHUbnxY1jhjc96wlv48CbuR+miGvLRc/tFe+02VAB0YGVifj+l6IoUzHmomOb4c3ISUcWIt3ciAPdpQGZmc3eT7LyxKf0l6KRiX63/2Yfg/FizP0Y5/wFhfN3RU/+F7FoUyxEOSf2xT1DlxroIMoKYEwwNq0xgr8EYsYxdvAYcH6/jzcN86Zne0R855etysmNxLACenn9PwAAAP//aai6CAAAAAZJREFUAwBYW+KOvnqyOwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+:root{--bg:#f5f4f0;--card:#fff;--ink:#1a1a1a;--mut:#6b6b6b;--line:#dcdad3;--acc:#1f5f4a}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--card:#202020;--ink:#eee;--mut:#9a9a9a;--line:#333;--acc:#5fc4a0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:1200px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:22px;margin:0 0 4px}
+.sub{color:var(--mut);margin:0 0 20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 20px}
+label{display:block;font-size:13px;color:var(--mut)}
+label b{color:var(--ink);font-weight:600}
+input[type=range],select{width:100%;margin-top:6px}
+select{padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.chk{display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:38px 16px;text-align:center;color:var(--mut);cursor:pointer;background:var(--card);margin-bottom:16px}
+.drop.over{border-color:var(--acc);color:var(--acc)}
+.drop strong{color:var(--ink)}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.btn{border:1px solid var(--acc);background:var(--acc);color:#fff;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:disabled{opacity:.5;cursor:default}
+#status{color:var(--mut);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.pv canvas{width:100%;height:auto;display:block;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+.fn{font-weight:600;margin:10px 0 2px;word-break:break-all;font-size:14px}
+details{font-size:12px;color:var(--mut);margin:6px 0}
+input[type=text]{width:100%;margin-top:6px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+input:disabled,select:disabled{opacity:.45}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.infoBtn{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.infoBtn:hover{border-color:var(--acc);color:var(--acc)}
+dialog{width:min(720px,calc(100vw - 32px));max-height:calc(100vh - 48px);padding:0;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.dlgHead{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--card)}
+.dlgHead h2{margin:0;font-size:18px}
+.dlgBody{padding:4px 18px 18px;font-size:14px;overflow:auto}
+.dlgBody h3{font-size:14px;margin:18px 0 6px;color:var(--acc)}
+.dlgBody ul{margin:0;padding-left:20px}
+.dlgBody li{margin:4px 0}
+.dlgBody .mut{color:var(--mut)}
+.dims{font-size:12px;color:var(--mut);margin:0 0 4px}
+label small{display:block;margin-top:6px;font-size:12px;line-height:1.35}
+pre{white-space:pre-wrap;margin:6px 0 0;font-size:11px}
+.row{display:flex;gap:8px;margin-top:8px}
+.presets{grid-column:1/-1;display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.presets label{flex:1 1 220px}
+.presets .btn{padding:6px 12px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<header><h1>Foto-Rahmen</h1><button type="button" class="infoBtn" id="infoBtn" aria-haspopup="dialog">ⓘ Info</button></header>
+<p class="sub">JPGs (Fuji, Sony, andere) oder RAWs hineinziehen, weißer Rahmen mit Aufnahmedaten, speichern. Alles läuft lokal im Browser, nichts wird hochgeladen.</p>
+
+<div class="panel settings">
+  <div class="presets">
+    <label>Preset<select id="preset"></select></label>
+    <button type="button" class="btn ghost" id="presetSave">Einstellungen speichern …</button>
+    <button type="button" class="btn ghost" id="presetDel" disabled>Löschen</button>
+    <button type="button" class="btn ghost" id="presetExport">Exportieren</button>
+    <button type="button" class="btn ghost" id="presetImport">Importieren</button>
+    <input type="file" id="presetFile" accept=".json,application/json" hidden>
+  </div>
+  <label>Rand: <b id="vBorder"></b> % der langen Kante<input type="range" id="border" min="1" max="8" step="0.5"></label>
+  <label>Textstreifen unten: <b id="vStrip"></b> %<input type="range" id="strip" min="4" max="16" step="1"></label>
+  <label>Verwendungszweck / Ausgabegröße (lange Kante, inkl. Rahmen)
+    <select id="target">
+      <option value="0" data-hint="Bild bleibt unverändert, der Rahmen kommt dazu. Für Archiv und Eigenbedarf.">Originalgröße (nicht verkleinern)</option>
+      <optgroup label="E-Mail &amp; Messenger">
+        <option value="1200" data-hint="Meist unter 1 MB pro Bild; für Mailversand und Messenger.">E-Mail klein – 1200 px</option>
+        <option value="1600" data-hint="Meist ca. 1 MB pro Bild; für Mail und WhatsApp.">E-Mail / WhatsApp – 1600 px</option>
+      </optgroup>
+      <optgroup label="Social Media">
+        <option value="1080" data-hint="Richtwert; Plattformen rechnen Bilder meist selbst herunter.">Social Media klein (z. B. Instagram) – 1080 px</option>
+        <option value="1350" data-hint="Instagram-Hochformat 1080 × 1350 px zusammen mit Seitenverhältnis 4:5.">Instagram Hochformat – 1350 px</option>
+        <option value="2048" data-hint="Richtwert für größere Uploads, z. B. Facebook.">Social Media groß (z. B. Facebook) – 2048 px</option>
+      </optgroup>
+      <optgroup label="Web &amp; Bildschirm">
+        <option value="1920" data-hint="Full-HD-Bildschirm, Präsentationen.">Full-HD-Bildschirm – 1920 px</option>
+        <option value="2400" data-hint="Webseite oder Blog mit scharfer Darstellung auf Retina-Displays.">Website / Blog – 2400 px</option>
+        <option value="3840" data-hint="4K-Bildschirm, digitale Bilderrahmen.">4K-Bildschirm – 3840 px</option>
+      </optgroup>
+      <optgroup label="Print (300 dpi)">
+        <option value="1772" data-hint="Richtwert 300 dpi. Rahmen und Textstreifen verändern das Seitenverhältnis; Fotolabore beschneiden ggf. oder lassen Ränder. Abhilfe: Seitenverhältnis 3:2 bzw. 2:3 wählen.">10 × 15 cm – 1772 px</option>
+        <option value="2126" data-hint="Richtwert 300 dpi. Rahmen und Textstreifen verändern das Seitenverhältnis; Fotolabore beschneiden ggf. oder lassen Ränder. Abhilfe: Seitenverhältnis 3:2 bzw. 2:3 wählen.">13 × 18 cm – 2126 px</option>
+        <option value="3543" data-hint="Richtwert 300 dpi. Rahmen und Textstreifen verändern das Seitenverhältnis; Fotolabore beschneiden ggf. oder lassen Ränder. Abhilfe: Seitenverhältnis 3:2 bzw. 2:3 wählen.">20 × 30 cm – 3543 px</option>
+        <option value="3508" data-hint="Richtwert 300 dpi. Rahmen und Textstreifen verändern das Seitenverhältnis; Fotolabore beschneiden ggf. oder lassen Ränder. Abhilfe: Seitenverhältnis 3:2 bzw. 2:3 wählen.">A4 (21 × 29,7 cm) – 3508 px</option>
+        <option value="5315" data-hint="Richtwert 300 dpi. Rahmen und Textstreifen verändern das Seitenverhältnis; Fotolabore beschneiden ggf. oder lassen Ränder. Abhilfe: Seitenverhältnis 3:2 bzw. 2:3 wählen.">30 × 45 cm – 5315 px</option>
+      </optgroup>
+    </select><small class="mut" id="targetHint"></small></label>
+  <label>Seitenverhältnis (wird mit weißem Rand aufgefüllt, nichts wird abgeschnitten)
+    <select id="ratio">
+      <option value="">Wie Bild (nicht auffüllen)</option>
+      <option value="1:1">1:1 – quadratisch</option>
+      <option value="4:5">4:5 – Instagram Hochformat</option>
+      <option value="9:16">9:16 – Story / Reels</option>
+      <option value="3:2">3:2 – Querformat, Fotoabzug</option>
+      <option value="2:3">2:3 – Hochformat, Fotoabzug</option>
+      <option value="3:2/2:3">3:2 / 2:3 – Fotoabzug, passend zur Bildausrichtung</option>
+    </select></label>
+  <label>JPEG-Qualität: <b id="vQ"></b><input type="range" id="quality" min="70" max="100" step="1"></label>
+  <label class="chk"><input type="checkbox" id="info"> Aufnahmedaten im unteren Rand (aus = gleichmäßiger weißer Rahmen)</label>
+  <label class="chk"><input type="checkbox" id="line3"> Dritte Zeile (Kamera-Einstellungen)</label>
+  <label class="chk"><input type="checkbox" id="wm"> Wasserzeichen unten rechts im Bild</label>
+  <label>Wasserzeichen-Text<input type="text" id="wmText" maxlength="60"></label>
+  <label>Wasserzeichen-Deckkraft: <b id="vWm"></b> %<input type="range" id="wmOpacity" min="10" max="100" step="5"></label>
+  <label class="chk"><input type="checkbox" id="gps"> Standort (GPS) in die Datei übernehmen</label>
+  <label>Autor (wird in die Datei geschrieben)<input type="text" id="author" maxlength="100" placeholder="z. B. Vorname Nachname"></label>
+  <label>Copyright-Vermerk (wird in die Datei geschrieben)<input type="text" id="copyright" maxlength="200" placeholder="z. B. © 2026 Vorname Nachname"><small class="mut">Leer lassen = Angaben aus der Kamera bleiben unverändert.</small></label>
+</div>
+
+<div class="drop" id="drop"><strong>JPGs oder RAWs hierher ziehen</strong><br>oder klicken zum Auswählen<br><small>RAW: es wird das in der Datei eingebettete Vorschau-JPEG der Kamera verwendet</small><input type="file" id="file" accept="image/jpeg,.jpg,.jpeg,.arw,.sr2,.srf,.raf,.dng,.nef,.cr2,.orf" multiple hidden></div>
+
+<div class="bar">
+  <button class="btn" id="zipBtn" disabled>Alle als ZIP speichern</button>
+  <button class="btn ghost" id="clearBtn" disabled>Liste leeren</button>
+  <span id="status"></span>
+</div>
+
+<div class="grid" id="grid"></div>
+</main>
+
+<dialog id="infoDlg" aria-labelledby="infoTitle">
+  <div class="dlgHead"><h2 id="infoTitle">Info: Funktionen und Einschränkungen</h2><button type="button" class="btn ghost" id="infoClose">Schließen</button></div>
+  <div class="dlgBody">
+    <h3>Funktionen</h3>
+    <ul>
+      <li><b>Drag &amp; Drop:</b> mehrere JPGs oder RAWs gleichzeitig ins Fenster ziehen (oder klicken zum Auswählen). Jedes Bild bekommt sofort eine Vorschau.</li>
+      <li><b>Weißer Rahmen</b> wie bei einem Fotoabzug; die Breite ist per Regler einstellbar (in % der langen Bildkante).</li>
+      <li><b>Zwei Rahmen-Modi:</b> Mit der Checkbox „Aufnahmedaten im unteren Rand" entsteht ein breiterer Streifen unten mit drei Textzeilen. Ohne Haken bekommst du einen gleichmäßigen Rahmen rundherum.</li>
+      <li><b>Textzeilen:</b>
+        <ul>
+          <li>Zeile 1: Kamera und Objektiv</li>
+          <li>Zeile 2: Brennweite, Blende, Belichtungszeit, ISO, Belichtungsprogramm</li>
+          <li>Zeile 3 (abschaltbar): Kamera-Einstellungen. <i>Fuji:</i> Film-Simulation, Dynamikbereich, Weißabgleich mit Feinabstimmung (bei Kelvin mit Farbtemperatur), Color Chrome, FX Blue, Highlight/Shadow, Sharpness, Farbe, Grain, Clarity. <i>Sony:</i> Creative Style, DRO, Belichtungskorrektur. <i>Andere:</i> Belichtungskorrektur, falls nicht 0.</li>
+        </ul></li>
+      <li><b>Wasserzeichen:</b> frei wählbarer Text (z. B. dein Name), halbtransparent unten rechts im Bild. Die Deckkraft ist einstellbar.</li>
+      <li><b>Ausgabegröße nach Verwendungszweck:</b> Originalgröße, E-Mail &amp; Messenger (1200/1600 px), Social Media (1080/2048 px), Web &amp; Bildschirm (1920/2400/3840 px) oder Print (10×15, 13×18, 20×30 cm, A4, 30×45 cm bei 300 dpi). Die Zahl gilt für die lange Kante des fertigen Bildes inklusive Rahmen; kleinere Bilder werden nie hochskaliert. An jeder Bildkarte steht die resultierende Ausgabegröße. JPEG-Qualität ist separat einstellbar. Speichern einzeln pro Bild oder alle zusammen als ZIP. Die Originale werden nie verändert.</li>
+      <li><b>Aufnahmedaten in der Datei:</b> Die gespeicherten Bilder behalten die Exif-Daten des Originals (Kamera, Objektiv, Belichtung, Aufnahmedatum, bei Fuji auch die Kamera-Einstellungen). Der Standort (GPS) wird zum Schutz der Privatsphäre nur übernommen, wenn du den Haken „Standort (GPS) in die Datei übernehmen“ setzt. An jeder Bildkarte steht, ob das Original einen Standort enthält und ob er übernommen oder entfernt wird.</li>
+      <li><b>Autor und Copyright:</b> Was du in diese Felder einträgst, wird in jedes gespeicherte Bild geschrieben (Exif, IPTC und XMP, damit möglichst viele Programme es anzeigen). Leere Felder lassen die Angaben aus der Kamera unverändert.</li>
+      <li><b>Seitenverhältnis:</b> 1:1, 4:5 (Instagram), 9:16 (Story/Reels), 3:2 oder 2:3 (Fotoabzug) sowie 3:2/2:3 passend zur Bildausrichtung. Das gerahmte Bild samt Aufnahmedaten wird mittig auf eine weiße Fläche im gewählten Format gesetzt, es wird nichts abgeschnitten. Die Ausgabegröße gilt für das fertige Bild inklusive dieser Fläche.</li>
+      <li><b>Presets:</b> Oben im Einstellungsbereich. Drei Standard-Presets (Instagram 4:5 mit 1350 px, Story 9:16 mit 1920 px, Print 10×15) setzen nur Format und Größe. Mit „Einstellungen speichern …“ legst du eigene Presets an; sie enthalten <b>alle</b> Einstellungen, auch Autor, Copyright und Wasserzeichen-Text. Eigene Presets lassen sich als Datei exportieren und auf einem anderen Gerät oder von anderen Personen importieren – beim Weitergeben stehen also auch deine persönlichen Angaben darin.</li>
+      <li><b>Gelesene Werte:</b> Pro Bild lassen sich die ausgelesenen Rohdaten aufklappen, um die Zuordnung zu prüfen.</li>
+      <li><b>Lokal und privat:</b> Alles läuft im Browser, es wird nichts hochgeladen. Deine Einstellungen merkt sich der Browser.</li>
+    </ul>
+
+    <h3>Unterstützte Dateien</h3>
+    <ul>
+      <li><b>JPEG</b> von Fuji, Sony und anderen Herstellern (Basis-Exif-Daten überall, Zusatzdaten bei Fuji und Sony).</li>
+      <li><b>RAW:</b> Sony <code>.ARW</code>, <code>.SR2</code>, <code>.SRF</code> und Fuji <code>.RAF</code>. Best Effort (nur mit Testdateien geprüft): <code>.DNG</code>, <code>.NEF</code>, <code>.CR2</code>, <code>.ORF</code>.</li>
+      <li>Bei RAWs entsteht der Rahmen um das <b>in der Datei eingebettete Vorschau-JPEG</b> der Kamera; die Aufnahmedaten kommen aus dem RAW. Die Ausgabe heißt dann z. B. <code>DSC00002_arw_rahmen.jpg</code>.</li>
+    </ul>
+
+    <h3>Einschränkungen</h3>
+    <ul>
+      <li><b>Kein RAW-Entwickeln.</b> Das eingebettete Vorschau-JPEG kann kleiner sein als das RAW (bei manchen Kameras nur ca. 1600 px lange Kante). Die tatsächliche Größe steht an der Bildkarte. Für große Ausgaben besser die Kamera-JPEGs verwenden.</li>
+      <li><b>Sony:</b> Es werden nur Creative Style, DRO und Belichtungskorrektur ausgewertet. Picture Profile, Weißabgleich und weitere Sony-Einstellungen fehlen noch. Ob jede Sony-Generation korrekt gelesen wird, ist nur mit Testdateien geprüft.</li>
+      <li><b>Fuji:</b> Die Zuordnung der Werte wurde mit einem Acros-Bild der X100VI geprüft. Bei anderen Film-Simulationen und Kameras kann eine Angabe abweichen oder fehlen. Dann hilft der Blick in „Gelesene Werte".</li>
+      <li><b>Fehlende Angaben:</b> Werte, die nicht in der Datei stehen, werden weggelassen. JPEGs aus Bildbearbeitung oder RAW-Konvertern haben oft keine Hersteller-Einstellungen mehr.</li>
+      <li><b>Wasserzeichen:</b> Position fest unten rechts, weiß mit leichtem Schatten. Auf sehr hellen Flächen (z. B. Himmel) ist es schwächer lesbar, dann Deckkraft erhöhen.</li>
+      <li><b>Größen-Richtwerte:</b> Die Werte für Social Media sind Richtwerte, Plattformen rechnen Bilder meist selbst um. Bei Print sind die Pixelmaße für 300 dpi berechnet; es wird keine dpi-Angabe in die Datei geschrieben. Durch Rahmen und Textstreifen weicht das Seitenverhältnis vom Papierformat ab, Fotolabore beschneiden dann ggf. oder lassen Ränder. Abhilfe: unter „Seitenverhältnis“ 3:2 bzw. 2:3 wählen.</li>
+      <li><b>Performance:</b> Sehr große Bilder (über ca. 40 Megapixel) in Originalgröße können den Browser verlangsamen; für Serien eine kleinere Zielgröße wählen. Bei RAWs wird die ganze Datei gelesen, das dauert bei großen Dateien kurz.</li>
+      <li><b>Schrift und Text:</b> Es wird die Systemschrift Arial/Helvetica verwendet. Zu lange Zeilen werden automatisch verkleinert.</li>
+      <li><b>Metadaten:</b> Nicht übernommen werden Sony-Einstellungen (Creative Style, DRO), XMP/IPTC und das Farbprofil. Wird ein gespeichertes Sony-Bild erneut geladen, fehlt daher die dritte Textzeile.</li>
+      <li><b>ZIP:</b> Die Bilder im ZIP sind unkomprimiert (JPEGs lassen sich kaum weiter verkleinern).</li>
+      <li><b>Browser:</b> Aktuelles Safari, Chrome, Edge oder Firefox.</li>
+    </ul>
+    <p class="mut">Tipp: Wenn eine Angabe falsch oder unvollständig aussieht, Bild und die „Gelesenen Werte" aufheben, dann lässt sich die Zuordnung gezielt nachbessern.</p>
+  </div>
+</dialog>
+
+<script>
+"use strict";
+/* ---------- Einstellungen ---------- */
+const o={border:3,strip:8,target:0,quality:92,line3:true,info:true,wm:false,wmText:'',wmOpacity:60,author:'',copyright:'',gps:false,ratio:''};
+const DEF=Object.freeze({...o});   // Standardwerte, auch als Typvorlage für Presets
+try{Object.assign(o,JSON.parse(localStorage.getItem('rahmen-settings')||'{}'))}catch(e){}
+const $=s=>document.querySelector(s);
+const PREV=1400;           // Vorschau: lange Kante in px
+const items=[];
+let busy=false;
+
+/* ---------- EXIF / Fuji-MakerNote ---------- */
+const TS={1:1,2:1,3:2,4:4,5:8,6:1,7:1,8:2,9:4,10:8,11:4,12:8,13:4};
+function readIFD(dv,start,base,le){
+  const out={};
+  if(start+2>dv.byteLength) return out;
+  const n=dv.getUint16(start,le);
+  if(n>2000) return out;
+  for(let i=0;i<n;i++){
+    const e=start+2+i*12; if(e+12>dv.byteLength) break;
+    const type=dv.getUint16(e+2,le), cnt=dv.getUint32(e+4,le), size=(TS[type]||1)*cnt;
+    const vo=size<=4?e+8:base+dv.getUint32(e+8,le);
+    out[dv.getUint16(e,le)]={type,cnt,vo,size};
+  }
+  return out;
+}
+function val(dv,en,le){
+  if(!en||en.vo+en.size>dv.byteLength) return undefined;
+  const {type,cnt,vo}=en;
+  if(type===2){let s='';for(let i=0;i<cnt;i++){const c=dv.getUint8(vo+i);if(!c)break;s+=String.fromCharCode(c)}return s.trim()}
+  const a=[];
+  for(let i=0;i<Math.min(cnt,16);i++){
+    switch(type){
+      case 1:case 7:a.push(dv.getUint8(vo+i));break;
+      case 3:a.push(dv.getUint16(vo+i*2,le));break;
+      case 4:case 13:a.push(dv.getUint32(vo+i*4,le));break;
+      case 5:{const d=dv.getUint32(vo+i*8+4,le);a.push(d?dv.getUint32(vo+i*8,le)/d:0);break}
+      case 8:a.push(dv.getInt16(vo+i*2,le));break;
+      case 9:a.push(dv.getInt32(vo+i*4,le));break;
+      case 10:{const d=dv.getInt32(vo+i*8+4,le);a.push(d?dv.getInt32(vo+i*8,le)/d:0);break}
+    }
+  }
+  return a;
+}
+function parseExif(buf){
+  const m={}; 
+  try{
+    const dv=new DataView(buf);
+    if(dv.getUint16(0)!==0xFFD8) return m;
+    let p=2;
+    while(p+4<dv.byteLength){
+      const mk=dv.getUint16(p); if(mk===0xFFDA||mk<0xFF00) break;
+      const len=dv.getUint16(p+2);
+      if(mk===0xFFE1&&dv.getUint32(p+4)===0x45786966){ parseTiff(dv,p+10,m); break; }
+      p+=2+len;
+    }
+  }catch(e){}
+  return m;
+}
+function parseTiff(dv,t,m){
+  const le=dv.getUint16(t)===0x4949;
+  const ifd0=readIFD(dv,t+dv.getUint32(t+4,le),t,le);
+  m.make=val(dv,ifd0[0x010F],le); m.model=val(dv,ifd0[0x0110],le);
+  const or=val(dv,ifd0[0x0112],le); if(or&&or[0]) m.orient=or[0];
+  m.exif={le,ifd0:pickTags(dv,ifd0,k=>KEEP0.has(k)),ex:[],mn:null,gps:[]};
+  const gp=val(dv,ifd0[0x8825],le); if(gp) m.exif.gps=pickTags(dv,readIFD(dv,t+gp[0],t,le),()=>true);
+  const ep=val(dv,ifd0[0x8769],le); if(!ep) return;
+  const ex=readIFD(dv,t+ep[0],t,le);
+  m.exif.ex=pickTags(dv,ex,k=>!DROPX.has(k));
+  const g=k=>{const v=val(dv,ex[k],le);return Array.isArray(v)?v[0]:v};
+  m.et=g(0x829A); m.fn=g(0x829D); m.prog=g(0x8822); m.iso=g(0x8827); m.ev=g(0x9204); m.fl=g(0x920A); m.lens=val(dv,ex[0xA434],le);
+  const mn=ex[0x927C];
+  if(mn&&mn.vo+12<dv.byteLength&&dv.getUint32(mn.vo)===0x46554A49){ // "FUJI"
+    const base=mn.vo, f=readIFD(dv,base+dv.getUint32(base+8,true),base,true);
+    m.fuji={}; m.raw={};
+    for(const k in f){ const v=val(dv,f[k],true); if(v!==undefined){ m.fuji[+k]=v; m.raw['0x'+(+k).toString(16)]=v; } }
+    // Fuji-Offsets sind relativ zum MakerNote-Start → Block lässt sich unverändert verschieben
+    if(mn.vo+mn.size<=dv.byteLength) m.exif.mn=new Uint8Array(dv.buffer,dv.byteOffset+mn.vo,mn.size).slice();
+  } else if(mn&&mn.vo+12<dv.byteLength&&/sony/i.test(m.make||'')){
+    // Sony: optionaler Header "SONY DSC \0\0\0" (12 Byte), Offsets relativ zum TIFF-Header
+    const hdr=dv.getUint32(mn.vo)===0x534F4E59;
+    const f=readIFD(dv,mn.vo+(hdr?12:0),t,le);
+    m.sony={}; m.raw={};
+    for(const k in f){ const v=val(dv,f[k],le); if(v!==undefined){ m.sony[+k]=v; m.raw['0x'+(+k).toString(16)]=v; } }
+    if(f[0x2001]) m.sonyPrev={off:f[0x2001].vo,len:f[0x2001].size};
+  }
+}
+
+/* ---------- Exif in die Ausgabe übernehmen (F-01) ---------- */
+// IFD0: nur beschreibende Tags. Bildstruktur, Vorschauen, RAW-Interna, Orientierung und dpi fallen weg.
+const KEEP0=new Set([0x010E,0x010F,0x0110,0x0131,0x0132,0x013B,0x4746,0x4749,0x8298]);
+// ExifIFD: alles außer Zeigern, Padding, MakerNote (nur Fuji, s. parseTiff) und Feldern, die für das
+// Canvas-JPEG (sRGB, YCbCr) neu gesetzt werden. GPS nur mit Haken (F-03), dann das ganze GPS-IFD.
+const DROPX=new Set([0x9101,0x927C,0xA001,0xA002,0xA003,0xA005,0xEA1C]);
+function pickTags(dv,ifd,keep){
+  const out=[];
+  for(const k in ifd){
+    const e=ifd[k], tag=+k;
+    if(!keep(tag)||!TS[e.type]||e.vo+e.size>dv.byteLength) continue;
+    const b=new Uint8Array(dv.buffer,dv.byteOffset+e.vo,e.size).slice();
+    if(e.type===2&&b.every(c=>c===0||c===0x20)) continue;   // leere Platzhalter (Fuji: Artist/Copyright aus Leerzeichen)
+    out.push({tag,type:e.type,cnt:e.cnt,b});
+  }
+  return out;
+}
+function tagNum(tag,type,v,le){ const b=new Uint8Array(type===3?2:4),d=new DataView(b.buffer); type===3?d.setUint16(0,v,le):d.setUint32(0,v,le); return {tag,type,cnt:1,b}; }
+const ifdSize=es=>2+es.length*12+4+es.reduce((s,e)=>s+(e.b.length>4?e.b.length+(e.b.length&1):0),0);
+function writeIFD(u,dv,pos,es,le){
+  es.sort((a,b)=>a.tag-b.tag);
+  let x=pos+2+es.length*12+4;
+  dv.setUint16(pos,es.length,le);
+  es.forEach((e,i)=>{
+    const p=pos+2+i*12; dv.setUint16(p,e.tag,le); dv.setUint16(p+2,e.type,le); dv.setUint32(p+4,e.cnt,le);
+    if(e.b.length<=4) u.set(e.b,p+8); else { dv.setUint32(p+8,x,le); u.set(e.b,x); x+=e.b.length+(e.b.length&1); }
+  });
+  dv.setUint32(pos+2+es.length*12,0,le);   // kein IFD1 (Miniaturbild zeigt das Bild ohne Rahmen)
+}
+/* APP1-Segment mit Exif für ein Ausgabebild der Größe w×h; own = eigene IFD0-Tags (ersetzen gleiche Tags
+   aus dem Original), withGps = GPS-IFD übernehmen; null, wenn nichts zu schreiben ist */
+function buildApp1(x,w,h,own=[],withGps=false,withMn=true){
+  const gps=withGps&&x&&x.gps?x.gps:[];
+  if(!x||(!x.ifd0.length&&!x.ex.length&&!gps.length)){ if(!own.length) return null; x={le:true,ifd0:[],ex:[],mn:null}; }
+  const le=x.le, raw=(tag,type,b)=>({tag,type,cnt:b.length,b:new Uint8Array(b)});
+  const i0=[...x.ifd0.filter(e=>!own.some(t=>t.tag===e.tag)),...own,
+    tagNum(0x0112,3,1,le),tagNum(0x0213,3,1,le),tagNum(0x8769,4,0,le)];   // Pixel sind bereits aufrecht
+  if(gps.length) i0.push(tagNum(0x8825,4,0,le));
+  const ptr=(tag,v)=>{ i0[i0.findIndex(e=>e.tag===tag)]=tagNum(tag,4,v,le); };
+  const ex=[...x.ex,tagNum(0xA002,4,w,le),tagNum(0xA003,4,h,le),tagNum(0xA001,3,1,le),raw(0x9101,7,[1,2,3,0])];
+  if(!x.ex.some(e=>e.tag===0x9000)) ex.push(raw(0x9000,7,[0x30,0x32,0x33,0x32]));   // "0232"
+  if(withMn&&x.mn) ex.push({tag:0x927C,type:7,cnt:x.mn.length,b:x.mn});
+  const exOff=8+ifdSize(i0), gpsOff=exOff+ifdSize(ex), len=gpsOff+(gps.length?ifdSize(gps):0);
+  if(len+8>65533) return withMn&&x.mn?buildApp1(x,w,h,own,withGps,false):null;   // APP1 max. 64 KB
+  ptr(0x8769,exOff); if(gps.length) ptr(0x8825,gpsOff);
+  const u=new Uint8Array(10+len), dv=new DataView(u.buffer);
+  dv.setUint16(0,0xFFE1); dv.setUint16(2,len+8); u.set([0x45,0x78,0x69,0x66,0,0],4);
+  const t=new Uint8Array(u.buffer,10), tv=new DataView(u.buffer,10);
+  tv.setUint16(0,le?0x4949:0x4D4D); tv.setUint16(2,42,le); tv.setUint32(4,8,le);
+  writeIFD(t,tv,8,i0,le);
+  writeIFD(t,tv,exOff,ex,le);
+  if(gps.length) writeIFD(t,tv,gpsOff,[...gps],le);
+  return u;
+}
+/* ---------- Autor / Copyright (F-02): Exif, XMP und IPTC ---------- */
+const enc=new TextEncoder();
+// Exif-ASCII-Feld; UTF-8 wie bei exiftool, damit Umlaute erhalten bleiben
+const tagStr=(tag,s)=>{ const b=new Uint8Array([...enc.encode(s),0]); return {tag,type:2,cnt:b.length,b}; };
+function ownTags(){
+  const t=[], a=o.author.trim(), c=o.copyright.trim();
+  if(a) t.push(tagStr(0x013B,a));
+  if(c) t.push(tagStr(0x8298,c));
+  return t;
+}
+function segment(marker,head,body){
+  const n=head.length+body.length, u=new Uint8Array(4+n);
+  u.set([0xFF,marker,(n+2)>>8,(n+2)&255]); u.set(head,4); u.set(body,4+head.length);
+  return u;
+}
+const xmlEsc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function buildXmp(a,c){
+  if(!a&&!c) return null;
+  const x='<?xpacket begin="\uFEFF" id="W5M0MpCehiHzreSzNTczkc9d"?>'
+    +'<x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">'
+    +'<rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/">'
+    +(a?'<dc:creator><rdf:Seq><rdf:li>'+xmlEsc(a)+'</rdf:li></rdf:Seq></dc:creator>':'')
+    +(c?'<dc:rights><rdf:Alt><rdf:li xml:lang="x-default">'+xmlEsc(c)+'</rdf:li></rdf:Alt></dc:rights>':'')
+    +'</rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="w"?>';
+  return segment(0xE1,enc.encode('http://ns.adobe.com/xap/1.0/\0'),enc.encode(x));
+}
+// IPTC-Felder haben Längengrenzen in Byte; nur an Zeichengrenzen kürzen
+function cut(s,max){ let b=enc.encode(s); while(b.length>max){ s=s.slice(0,-1); b=enc.encode(s); } return b; }
+function buildApp13(a,c){
+  if(!a&&!c) return null;
+  const d=[], add=(rec,ds,b)=>d.push(0x1C,rec,ds,b.length>>8,b.length&255,...b);
+  add(1,90,[0x1B,0x25,0x47]);   // Zeichensatz UTF-8
+  add(2,0,[0,4]);               // RecordVersion
+  if(a) add(2,80,cut(a,32));    // By-line
+  if(c) add(2,116,cut(c,128));  // CopyrightNotice
+  if(d.length&1) d.push(0);
+  const r=[...enc.encode('8BIM'),0x04,0x04,0,0,d.length>>>24,(d.length>>16)&255,(d.length>>8)&255,d.length&255,...d];
+  return segment(0xED,enc.encode('Photoshop 3.0\0'),new Uint8Array(r));
+}
+
+/* Metadaten-Segmente direkt hinter SOI einsetzen. JFIF-APP0, APP1 und APP13 des Canvas-Exports
+   (Safari schreibt eigenes Exif und leeres IPTC) entfallen. */
+async function withExif(blob,segs){
+  const u=new Uint8Array(await blob.arrayBuffer()), keep=[u.subarray(0,2),...segs.filter(Boolean)];
+  let p=2;
+  while(p+4<=u.length&&u[p]===0xFF&&u[p+1]>=0xE0&&u[p+1]<=0xEF){   // nur APPn-Segmente am Anfang
+    const n=2+(u[p+2]<<8|u[p+3]);
+    if(![0xE0,0xE1,0xED].includes(u[p+1])) keep.push(u.subarray(p,p+n));
+    p+=n;
+  }
+  keep.push(u.subarray(p));
+  return new Blob(keep,{type:'image/jpeg'});
+}
+
+/* RAW: eingebettetes Vorschau-JPEG finden (kein RAW-Entwickeln) */
+function parseRaw(buf){
+  const dv=new DataView(buf), res={meta:{},blob:null,rot:1};
+  if(buf.byteLength<100) return res;
+  const sig=String.fromCharCode(...new Uint8Array(buf,0,15));
+  if(sig==='FUJIFILMCCD-RAW'){ // Fuji RAF: JPEG-Offset/-Länge im Header (Big Endian)
+    const off=dv.getUint32(84),len=dv.getUint32(88);
+    if(off&&off+len<=buf.byteLength){ const jb=buf.slice(off,off+len); res.meta=parseExif(jb.slice(0,400000)); res.blob=new Blob([jb],{type:'image/jpeg'}); }
+    return res;
+  }
+  const bo=dv.getUint16(0); if(bo!==0x4949&&bo!==0x4D4D) return res;
+  const le=bo===0x4949; if(dv.getUint16(2,le)!==42) return res;
+  const m={}; try{ parseTiff(dv,0,m); }catch(e){}
+  res.meta=m;
+  const cands=[], seen=new Set();
+  const addC=(off,len)=>{ if(off>0&&len>1000&&off+len<=buf.byteLength&&dv.getUint16(off)===0xFFD8) cands.push({off,len}); };
+  const walk=(off,depth)=>{
+    if(!off||off+2>buf.byteLength||seen.has(off)||depth>4) return; seen.add(off);
+    const ifd=readIFD(dv,off,0,le);
+    const g=k=>{const v=val(dv,ifd[k],le);return Array.isArray(v)?v:[]};
+    const a=g(0x201),b=g(0x202); if(a.length&&b.length) addC(a[0],b[0]);
+    const comp=g(0x103)[0], so=g(0x111), sc=g(0x117);
+    if((comp===6||comp===7)&&so.length===1&&sc.length===1) addC(so[0],sc[0]);
+    for(const sub of g(0x14A)) walk(sub,depth+1);
+    const n=dv.getUint16(off,le), nx=off+2+n*12;
+    if(n<=2000&&nx+4<=buf.byteLength) walk(dv.getUint32(nx,le),depth+1);
+  };
+  walk(dv.getUint32(4,le),0);
+  if(m.sonyPrev) addC(m.sonyPrev.off,m.sonyPrev.len);
+  cands.sort((x,y)=>y.len-x.len);
+  if(cands.length){
+    const c=cands[0], jb=buf.slice(c.off,c.off+c.len), own=parseExif(jb.slice(0,65536));
+    res.blob=new Blob([jb],{type:'image/jpeg'});
+    res.rot=own.orient?1:(m.orient||1);   // Vorschau ohne eigene Orientierung: RAW-Wert manuell anwenden
+  }
+  return res;
+}
+
+/* ---------- Texte aufbauen ---------- */
+const FILM={0:'Provia',0x100:'Studio Portrait',0x110:'Studio Portrait',0x120:'Astia',0x130:'Studio Portrait',0x200:'Velvia',0x300:'Studio Portrait Ex',0x400:'Velvia',0x500:'Pro Neg. Std',0x501:'Pro Neg. Hi',0x600:'Classic Chrome',0x700:'Eterna',0x800:'Classic Neg.',0x900:'Eterna Bleach Bypass',0xa00:'Nostalgic Neg.',0xb00:'Reala Ace'};
+const SAT={0:'0',0x80:'+1',0x100:'+2',0x180:'+3',0x200:'+4',0x400:'-1',0x4c0:'-2',0x3c0:'-3',0x3e0:'-4',0x300:'B&W',0x301:'B&W Red Filter',0x302:'B&W Yellow Filter',0x303:'B&W Green Filter',0x310:'B&W Sepia',0x500:'Acros',0x501:'Acros Red Filter',0x502:'Acros Yellow Filter',0x503:'Acros Green Filter'};
+const SHARP={0:-4,1:-3,2:-2,3:0,4:2,5:3,6:4,0x82:-1,0x84:1};
+const WBN={0:'Auto',1:'Auto White',2:'Auto Ambiance',0x100:'Daylight',0x200:'Cloudy',0x300:'Fluorescent 1',0x301:'Fluorescent 2',0x302:'Fluorescent 3',0x303:'Fluorescent 4',0x304:'Fluorescent 5',0x400:'Incandescent',0x500:'Flash',0x600:'Underwater',0xf00:'Custom 1',0xf01:'Custom 2',0xf02:'Custom 3',0xf03:'Custom 4',0xf04:'Custom 5',0xff0:'Kelvin'};
+const STR={0:'Off',32:'Weak',64:'Strong'};
+const PROG=['','Manual','Program AE','Aperture-priority AE','Shutter speed priority AE','Creative','Action','Portrait','Landscape'];
+const sgn=n=>(n>0?'+':'')+n;
+const num=(n,d=1)=>n.toFixed(d).replace(/\.?0+$/,'');
+
+function buildLines(m){
+  let make=m.make||'', model=m.model||'';
+  const l1=[(model.toLowerCase().startsWith(make.split(' ')[0].toLowerCase())?model:(make+' '+model)).trim()];
+  if(m.lens) l1.push(m.lens);
+  const p=[];
+  if(m.fl) p.push(num(m.fl)+' mm');
+  if(m.fn) p.push('f/'+num(m.fn));
+  if(m.et) p.push(m.et<1?'1/'+Math.round(1/m.et)+' s':num(m.et)+' s');
+  if(m.iso) p.push('ISO '+m.iso);
+  if(m.prog&&PROG[m.prog]) p.push(PROG[m.prog]);
+  const sep='  ·  ';
+  return [l1.join(sep),p.join(sep),(m.fuji?fujiLine(m.fuji):m.sony?sonyLine(m):generalLine(m)).join(sep)];
+}
+const evStr=v=>{const x=Math.round(v*10)/10; return (x>0?'+':'')+String(x)};
+const DRO={0:'Off',1:'Standard',2:'Advanced Auto',3:'Auto',8:'Advanced Lv1',9:'Advanced Lv2',10:'Advanced Lv3',11:'Advanced Lv4',12:'Advanced Lv5'};
+function generalLine(m){ const p=[]; if(typeof m.ev==='number'&&Math.abs(m.ev)>=0.05) p.push('EV '+evStr(m.ev)); return p; }
+function sonyLine(m){
+  const f=m.sony, p=[];
+  const cs=f[0xb020]; if(typeof cs==='string'&&cs&&!/^(none|off)$/i.test(cs)) p.push('Creative Style '+cs);
+  const d=f[0xb025]&&f[0xb025][0]; if(d&&DRO[d]) p.push('DRO '+DRO[d]);
+  return p.concat(generalLine(m));
+}
+function fujiLine(f){
+  const parts=[];
+  // Film-Simulation: FilmMode, bei Acros/S&W steckt sie im Feld "Saturation"
+  const sat=f[0x1003]?SAT[f[0x1003][0]]:undefined;
+  const satIsFilm=sat&&!/^[+-]?\d$/.test(sat);
+  const film=f[0x1401]!==undefined?FILM[f[0x1401][0]]:undefined;
+  if(satIsFilm) parts.push(sat); else if(film) parts.push(film);
+  // Dynamikbereich
+  const dev=f[0x1403]&&f[0x1403][0], drs=f[0x1402]&&f[0x1402][0], auto=f[0x140b]&&f[0x140b][0];
+  if(dev) parts.push('DR'+dev);
+  else if(drs===0) parts.push(auto?'DR'+auto:'DR Auto');
+  // Andere Werte von 0x1402 (z. B. 0x200) sind je Kamera unterschiedlich belegt → weglassen statt raten
+  // Weißabgleich
+  if(f[0x1002]&&WBN[f[0x1002][0]]!==undefined){
+    const k=f[0x1002][0]===0xff0&&f[0x1005]&&f[0x1005][0];   // Kelvin: eingestellte Farbtemperatur
+    let s='WB '+(k?k+'K':WBN[f[0x1002][0]]);
+    const ft=f[0x100a]; if(ft&&ft.length>=2){const r=Math.round(ft[0]/20),b=Math.round(ft[1]/20); if(r||b) s+=' R'+sgn(r)+' B'+sgn(b);}
+    parts.push(s);
+  }
+  if(f[0x1048]&&f[0x1048][0]) parts.push('Color Chrome '+(STR[f[0x1048][0]]||f[0x1048][0]));
+  if(f[0x104e]&&f[0x104e][0]) parts.push('FX Blue '+(STR[f[0x104e][0]]||f[0x104e][0]));
+  const tone=v=>{const x=-v/16; return x?sgn(Math.round(x*2)/2):''};
+  if(f[0x1041]&&tone(f[0x1041][0])) parts.push('Highlight '+tone(f[0x1041][0]));
+  if(f[0x1040]&&tone(f[0x1040][0])) parts.push('Shadow '+tone(f[0x1040][0]));
+  if(f[0x1001]&&SHARP[f[0x1001][0]]) parts.push('Sharp '+sgn(SHARP[f[0x1001][0]]));
+  if(sat&&!satIsFilm&&sat!=='0') parts.push('Color '+sat);
+  if(f[0x1047]&&f[0x1047][0]) parts.push('Grain '+(STR[f[0x1047][0]]||f[0x1047][0]));
+  if(f[0x100f]&&f[0x100f][0]) parts.push('Clarity '+sgn(Math.round(f[0x100f][0]/1000*2)/2));
+  return parts;
+}
+
+/* ---------- Rahmen zeichnen ---------- */
+/* Zielseitenverhältnis (F-04): gerahmtes Bild samt Textstreifen mittig auf weißer Fläche, nichts wird abgeschnitten */
+// "3:2/2:3": Querformat → 3:2, Hochformat → 2:3
+const ratioVal=(fw,fh)=>{ if(o.ratio==='3:2/2:3') return fw>=fh?3/2:2/3; const m=/^(\d+):(\d+)$/.exec(o.ratio||''); return m?m[1]/m[2]:0; };
+function padDims(fw,fh){
+  const r=ratioVal(fw,fh); if(!r) return {W:fw,H:fh,ox:0,oy:0};
+  const wide=fw/fh<r, W=wide?Math.round(fh*r):fw, H=wide?fh:Math.round(fw/r);
+  return {W,H,ox:Math.floor((W-fw)/2),oy:Math.floor((H-fh)/2)};
+}
+function drawFramed(src,iw,ih,lines,o){
+  const L=Math.max(iw,ih), B=Math.round(L*o.border/100), E=o.info?Math.round(L*o.strip/100):0;
+  const cw=iw+2*B, ch=ih+2*B+E, P=padDims(cw,ch);
+  const c=document.createElement('canvas'); c.width=P.W; c.height=P.H;
+  const g=c.getContext('2d');
+  g.fillStyle='#fff'; g.fillRect(0,0,P.W,P.H);
+  g.translate(P.ox,P.oy);
+  g.imageSmoothingEnabled=true; g.imageSmoothingQuality='high';
+  g.drawImage(src,B,B,iw,ih);
+  g.textAlign='center'; g.textBaseline='bottom';
+  const maxW=cw*0.92;
+  const defs=[[lines[0],'bold ',0.0155,'#111',0.070],[lines[1],'',0.0140,'#333',0.037],[lines[2],'',0.0110,'#555',0.013]];
+  for(const [t,w,sz,col,y] of defs){
+    if(!t) continue;
+    let px=L*sz; const font=s=>w+s+'px Arial, Helvetica, sans-serif';
+    g.font=font(px); const tw=g.measureText(t).width; if(tw>maxW){px*=maxW/tw; g.font=font(px);}
+    g.fillStyle=col; g.fillText(t,cw/2,ch-L*y);
+  }
+  if(o.wm&&o.wmText.trim()){
+    const wpx=L*0.022, m=L*0.02;
+    g.save();
+    g.font='600 '+wpx+'px Arial, Helvetica, sans-serif';
+    g.textAlign='right'; g.textBaseline='bottom';
+    g.globalAlpha=o.wmOpacity/100;
+    g.shadowColor='rgba(0,0,0,0.55)'; g.shadowBlur=wpx*0.15; g.shadowOffsetX=wpx*0.03; g.shadowOffsetY=wpx*0.03;
+    g.fillStyle='#fff';
+    g.fillText(o.wmText.trim(),B+iw-m,B+ih-m);
+    g.restore();
+  }
+  return c;
+}
+function loadImg(file,name){
+  return new Promise((res,rej)=>{const u=URL.createObjectURL(file),i=new Image();i.onload=()=>res({img:i,u});i.onerror=()=>{URL.revokeObjectURL(u);rej(new Error('Bild nicht lesbar: '+(name||file.name)))};i.src=u});
+}
+function rotCanvas(img,w,h,orient){
+  const swap=orient>=5&&orient<=8, c=document.createElement('canvas'); c.width=swap?h:w; c.height=swap?w:h;
+  const g=c.getContext('2d');
+  switch(orient){case 2:g.transform(-1,0,0,1,w,0);break;case 3:g.transform(-1,0,0,-1,w,h);break;case 4:g.transform(1,0,0,-1,0,h);break;
+    case 5:g.transform(0,1,1,0,0,0);break;case 6:g.transform(0,1,-1,0,h,0);break;case 7:g.transform(0,-1,-1,0,h,w);break;case 8:g.transform(0,-1,1,0,0,w);break;}
+  g.drawImage(img,0,0); return c;
+}
+async function getSource(it){
+  const {img,u}=await loadImg(it.blob,it.file.name);
+  let src=img,w=img.naturalWidth,h=img.naturalHeight;
+  if(it.rot>1){ src=rotCanvas(img,w,h,it.rot); w=src.width; h=src.height; }
+  return {src,w,h,done:()=>URL.revokeObjectURL(u)};
+}
+/* Zielgröße gilt für die lange Kante des fertigen Bildes inkl. Rahmen; es wird nie hochskaliert */
+function plan(W,H){
+  const L=Math.max(W,H), b=o.border/100, e=o.info?o.strip/100:0;
+  const P=padDims(W+2*b*L,H+2*b*L+e*L);
+  return {s:o.target?Math.min(1,(o.target-1)/Math.max(P.W,P.H)):1};
+}
+function finalDims(W,H){
+  const s=plan(W,H).s, iw=Math.round(W*s), ih=Math.round(H*s), L=Math.max(iw,ih);
+  const B=Math.round(L*o.border/100), E=o.info?Math.round(L*o.strip/100):0;
+  const P=padDims(iw+2*B,ih+2*B+E);
+  return {iw,ih,cw:P.W,ch:P.H};
+}
+const linesFor=it=>o.info?[it.l[0],it.l[1],o.line3?it.l[2]:'']:['','',''];
+async function renderFull(it){
+  const q=await getSource(it);
+  const s=plan(q.w,q.h).s;
+  const c=drawFramed(q.src,Math.round(q.w*s),Math.round(q.h*s),linesFor(it),o);
+  q.done();
+  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',o.quality/100));
+  const a=o.author.trim(), cr=o.copyright.trim();
+  return withExif(blob,[buildApp1(it.meta.exif,c.width,c.height,ownTags(),o.gps),buildXmp(a,cr),buildApp13(a,cr)]);
+}
+const outName=it=>{const m=it.file.name.match(/^(.*)\.([^.]+)$/)||[0,it.file.name,''];return m[1]+(it.isRaw?'_'+m[2].toLowerCase():'')+'_rahmen.jpg'};
+
+/* ---------- UI ---------- */
+function status(t){$('#status').textContent=t||''}
+function setBusy(b){busy=b;$('#zipBtn').disabled=b||!items.length;$('#clearBtn').disabled=b||!items.length;document.querySelectorAll('.card .btn').forEach(x=>x.disabled=b)}
+function renderPreview(it){
+  const c=drawFramed(it.prev,it.pw,it.ph,linesFor(it),o);
+  const pv=it.el.querySelector('.pv'); pv.replaceChildren(c);
+  const d=finalDims(it.W,it.H), hasGps=!!(it.meta.exif&&it.meta.exif.gps.some(e=>e.tag===2));   // 2 = GPSLatitude
+  it.el.querySelector('.dims').textContent='Ausgabe: '+d.cw+' × '+d.ch+' px (ca. '+(d.cw*d.ch/1e6).toFixed(1)+' MP)'
+    +(hasGps?' · GPS-Standort im Original ('+(o.gps?'wird übernommen':'wird entfernt')+')':'');
+}
+function makeCard(it){
+  const d=document.createElement('div'); d.className='card';
+  d.innerHTML='<div class="pv"></div><div class="fn"></div><div class="dims"></div><details><summary>Gelesene Werte</summary><pre></pre></details><div class="row"><button class="btn save">Speichern</button><button class="btn ghost del">Entfernen</button></div>';
+  d.querySelector('.fn').textContent=it.file.name+(it.isRaw?'  (RAW → eingebettetes Vorschau-JPEG, '+it.W+'×'+it.H+' px)':'');
+  const raw=it.meta.raw?Object.entries(it.meta.raw).map(([k,v])=>k+': '+(Array.isArray(v)?v.join(' '):v)).join('\n'):'(keine Hersteller-Tags gelesen)';
+  d.querySelector('pre').textContent=[it.l[0],it.l[1],it.l[2]].filter(Boolean).join('\n')+'\n\nFuji-Tags:\n'+raw;
+  d.querySelector('.save').onclick=async()=>{
+    setBusy(true); status('Erzeuge '+outName(it)+' …');
+    try{ dl(await renderFull(it),outName(it)); status('Gespeichert: '+outName(it)); }catch(e){ status('Fehler: '+e.message); }
+    setBusy(false);
+  };
+  d.querySelector('.del').onclick=()=>{items.splice(items.indexOf(it),1);d.remove();setBusy(false);};
+  it.el=d; $('#grid').appendChild(d); renderPreview(it);
+}
+const RAWRE=/\.(arw|sr2|srf|raf|dng|nef|cr2|orf)$/i;
+async function addFiles(list){
+  const files=[...list].filter(f=>/\.jpe?g$/i.test(f.name)||f.type==='image/jpeg'||RAWRE.test(f.name));
+  if(!files.length){status('Keine JPGs oder RAWs erkannt.');return}
+  setBusy(true);
+  let n=0;
+  for(const file of files){
+    status('Lese '+(++n)+' / '+files.length+' …');
+    try{
+      const isRaw=RAWRE.test(file.name);
+      let meta,blob=file,rot=1;
+      if(isRaw){
+        const r=parseRaw(await file.arrayBuffer());
+        if(!r.blob) throw new Error('kein eingebettetes Vorschau-JPEG gefunden');
+        meta=r.meta; blob=r.blob; rot=r.rot||1;
+      } else meta=parseExif(await file.slice(0,400000).arrayBuffer());
+      const q=await getSource({blob,rot,file});
+      const W=q.w,H=q.h,s=Math.min(1,PREV/Math.max(W,H));
+      const pw=Math.round(W*s),ph=Math.round(H*s);
+      const prev=document.createElement('canvas'); prev.width=pw; prev.height=ph;
+      const g=prev.getContext('2d'); g.imageSmoothingQuality='high'; g.drawImage(q.src,0,0,pw,ph);
+      q.done();
+      const it={file,blob,rot,isRaw,meta,W,H,prev,pw,ph,l:buildLines(meta)};
+      items.push(it); makeCard(it);
+    }catch(e){ status('Fehler bei '+file.name+': '+e.message); }
+  }
+  status(items.length+' Bild(er) geladen.'); setBusy(false);
+}
+function dl(blob,name){
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),5000);
+}
+
+/* ---------- ZIP (ohne Kompression, JPGs sind schon komprimiert) ---------- */
+const crcT=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+function crc32(u){let c=0xFFFFFFFF;for(let i=0;i<u.length;i++)c=crcT[(c^u[i])&255]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function makeZip(files){
+  const enc=new TextEncoder(),parts=[],cd=[];let off=0;
+  const d=new Date(),dt=(d.getHours()<<11)|(d.getMinutes()<<5)|(d.getSeconds()>>1),dd=((d.getFullYear()-1980)<<9)|((d.getMonth()+1)<<5)|d.getDate();
+  for(const f of files){
+    const nm=enc.encode(f.name),crc=crc32(f.data),n=f.data.length;
+    const h=new DataView(new ArrayBuffer(30));
+    h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(8,0,true);h.setUint16(10,dt,true);h.setUint16(12,dd,true);
+    h.setUint32(14,crc,true);h.setUint32(18,n,true);h.setUint32(22,n,true);h.setUint16(26,nm.length,true);h.setUint16(28,0,true);
+    parts.push(h.buffer,nm,f.data);
+    const c=new DataView(new ArrayBuffer(46));
+    c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x0800,true);c.setUint16(10,0,true);c.setUint16(12,dt,true);c.setUint16(14,dd,true);
+    c.setUint32(16,crc,true);c.setUint32(20,n,true);c.setUint32(24,n,true);c.setUint16(28,nm.length,true);c.setUint32(42,off,true);
+    cd.push(c.buffer,nm);
+    off+=30+nm.length+n;
+  }
+  let cds=0;for(const p of cd)cds+=p.byteLength;
+  const e=new DataView(new ArrayBuffer(22));
+  e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,cds,true);e.setUint32(16,off,true);
+  return new Blob([...parts,...cd,e.buffer],{type:'application/zip'});
+}
+
+/* ---------- Events ---------- */
+const infoDlg=$('#infoDlg');
+$('#infoBtn').onclick=()=>{ if(infoDlg.showModal) infoDlg.showModal(); else infoDlg.setAttribute('open',''); };
+$('#infoClose').onclick=()=>infoDlg.close();
+infoDlg.addEventListener('click',e=>{ if(e.target===infoDlg) infoDlg.close(); });
+function syncControls(){
+  $('#border').value=o.border;$('#strip').value=o.strip;{const sel=$('#target'); sel.value=String(o.target); if(sel.value!==String(o.target)){o.target=0;sel.value='0'}
+    $('#targetHint').textContent=sel.selectedOptions[0].dataset.hint||'';}
+  {const sel=$('#ratio'); sel.value=o.ratio; if(sel.value!==o.ratio){o.ratio='';sel.value=''}}$('#quality').value=o.quality;$('#line3').checked=o.line3;
+  $('#vBorder').textContent=o.border;$('#vStrip').textContent=o.strip;$('#vQ').textContent=o.quality;
+  $('#info').checked=o.info;$('#wm').checked=o.wm;$('#gps').checked=o.gps;$('#wmOpacity').value=o.wmOpacity;$('#vWm').textContent=o.wmOpacity;
+  if($('#wmText').value!==o.wmText) $('#wmText').value=o.wmText;
+  if($('#author').value!==o.author) $('#author').value=o.author;
+  if($('#copyright').value!==o.copyright) $('#copyright').value=o.copyright;
+  $('#strip').disabled=!o.info;$('#line3').disabled=!o.info;$('#wmText').disabled=!o.wm;$('#wmOpacity').disabled=!o.wm;
+}
+function onSetting(){
+  o.border=+$('#border').value;o.strip=+$('#strip').value;o.target=+$('#target').value;o.ratio=$('#ratio').value;o.quality=+$('#quality').value;o.line3=$('#line3').checked;
+  o.info=$('#info').checked;o.wm=$('#wm').checked;o.wmText=$('#wmText').value;o.wmOpacity=+$('#wmOpacity').value;
+  o.author=$('#author').value;o.copyright=$('#copyright').value;o.gps=$('#gps').checked;
+  $('#preset').value=''; $('#presetDel').disabled=true;   // Einstellungen weichen jetzt vom Preset ab
+  applySettings();
+}
+function applySettings(){
+  syncControls();
+  try{localStorage.setItem('rahmen-settings',JSON.stringify(o))}catch(e){}
+  items.forEach(renderPreview);
+}
+['border','strip','target','quality','line3','info','wm','wmText','wmOpacity','author','copyright','gps','ratio'].forEach(id=>$('#'+id).addEventListener('input',onSetting));
+syncControls();
+
+/* ---------- Presets (F-05) ---------- */
+// Standard-Presets setzen nur Format und Größe; eigene Presets enthalten alle Einstellungen
+const STD=[
+  {name:'Instagram (4:5, 1350 px)',settings:{ratio:'4:5',target:1350,gps:false}},
+  {name:'Story (9:16, 1920 px)',settings:{ratio:'9:16',target:1920,gps:false}},
+  {name:'Print 10×15 (300 dpi)',settings:{ratio:'3:2/2:3',target:1772}},
+];
+// Nur bekannte Schlüssel mit passendem Typ; Regler begrenzen, unbekannte Auswahlwerte verwerfen
+function cleanSettings(s){
+  const out={};
+  if(!s||typeof s!=='object') return out;
+  for(const k in DEF){
+    let v=s[k]; const el=$('#'+k);
+    if(typeof v!==typeof DEF[k]||(typeof v==='number'&&!isFinite(v))) continue;
+    if(el&&el.type==='range') v=Math.min(+el.max,Math.max(+el.min,v));
+    if(el&&el.tagName==='SELECT'&&![...el.options].some(x=>x.value===String(v))) continue;
+    out[k]=typeof v==='string'?v.slice(0,200):v;
+  }
+  return out;
+}
+const cleanPreset=p=>p&&typeof p.name==='string'&&p.name.trim()?{name:p.name.trim().slice(0,40),settings:cleanSettings(p.settings)}:null;
+let presets=[];
+try{ const p=JSON.parse(localStorage.getItem('rahmen-presets')||'[]'); if(Array.isArray(p)) presets=p.map(cleanPreset).filter(Boolean); }catch(e){}
+const savePresets=()=>{ try{localStorage.setItem('rahmen-presets',JSON.stringify(presets))}catch(e){} };
+function renderPresets(sel=''){
+  const s=$('#preset'), group=(label,list,pre)=>{ const g=document.createElement('optgroup'); g.label=label; list.forEach((p,i)=>g.append(new Option(p.name,pre+i))); return g; };
+  s.replaceChildren(new Option('– Preset wählen –',''),group('Standard',STD,'std:'));
+  if(presets.length) s.append(group('Eigene',presets,'own:'));
+  s.value=sel; $('#presetDel').disabled=!sel.startsWith('own:');
+}
+renderPresets();
+$('#preset').addEventListener('change',()=>{
+  const v=$('#preset').value, p=v.startsWith('std:')?STD[+v.slice(4)]:v.startsWith('own:')?presets[+v.slice(4)]:null;
+  $('#presetDel').disabled=!v.startsWith('own:');
+  if(!p) return;
+  Object.assign(o,cleanSettings(p.settings)); applySettings(); status('Preset „'+p.name+'“ geladen.');
+});
+$('#presetSave').onclick=()=>{
+  const n=(prompt('Name für das Preset (speichert alle aktuellen Einstellungen, auch Autor, Copyright und Wasserzeichen-Text):')||'').trim().slice(0,40);
+  if(!n) return;
+  if(STD.some(p=>p.name===n)){ status('„'+n+'“ ist ein Standard-Preset. Bitte einen anderen Namen wählen.'); return; }
+  let i=presets.findIndex(p=>p.name===n);
+  if(i>=0&&!confirm('Preset „'+n+'“ überschreiben?')) return;
+  const p={name:n,settings:{...o}};
+  if(i>=0) presets[i]=p; else i=presets.push(p)-1;
+  savePresets(); renderPresets('own:'+i); status('Preset „'+n+'“ gespeichert.');
+};
+$('#presetDel').onclick=()=>{
+  const v=$('#preset').value; if(!v.startsWith('own:')) return;
+  const i=+v.slice(4), n=presets[i].name;
+  if(!confirm('Preset „'+n+'“ löschen?')) return;
+  presets.splice(i,1); savePresets(); renderPresets(); status('Preset „'+n+'“ gelöscht.');
+};
+$('#presetExport').onclick=()=>{
+  if(!presets.length){ status('Keine eigenen Presets zum Exportieren.'); return; }
+  dl(new Blob([JSON.stringify({format:'photo-frame-studio-presets',version:1,presets},null,2)],{type:'application/json'}),'rahmen-presets.json');
+  status(presets.length+' Preset(s) exportiert.');
+};
+$('#presetImport').onclick=()=>$('#presetFile').click();
+$('#presetFile').onchange=async()=>{
+  const f=$('#presetFile').files[0]; if(!f) return;
+  try{
+    const j=JSON.parse(await f.text());
+    if(!j||j.format!=='photo-frame-studio-presets'||!Array.isArray(j.presets)) throw new Error('Format');
+    const list=j.presets.map(cleanPreset).filter(p=>p&&!STD.some(s=>s.name===p.name));
+    for(const p of list){ const i=presets.findIndex(x=>x.name===p.name); if(i>=0) presets[i]=p; else presets.push(p); }
+    savePresets(); renderPresets(); status('Import: '+list.length+' Preset(s) übernommen (gleichnamige ersetzt).');
+  }catch(e){ status('Import fehlgeschlagen: Datei nicht lesbar oder ungültig.'); }
+  $('#presetFile').value='';
+};
+
+const drop=$('#drop'),fileIn=$('#file');
+drop.onclick=()=>fileIn.click();
+fileIn.onchange=()=>{addFiles(fileIn.files);fileIn.value=''};
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over')}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over')}));
+drop.addEventListener('drop',e=>addFiles(e.dataTransfer.files));
+// Drop auch irgendwo auf der Seite zulassen (sonst öffnet der Browser das Bild)
+window.addEventListener('dragover',e=>e.preventDefault());
+window.addEventListener('drop',e=>{e.preventDefault(); if(!drop.contains(e.target)) addFiles(e.dataTransfer.files)});
+
+$('#clearBtn').onclick=()=>{items.length=0;$('#grid').replaceChildren();setBusy(false);status('')};
+$('#zipBtn').onclick=async()=>{
+  setBusy(true);
+  try{
+    const files=[],used=new Set();let i=0;
+    for(const it of items){
+      status('Erzeuge '+(++i)+' / '+items.length+' …');
+      const blob=await renderFull(it);
+      let name=outName(it),k=2; while(used.has(name)) name=outName(it).replace(/\.jpg$/,'_'+(k++)+'.jpg');
+      used.add(name); files.push({name,data:new Uint8Array(await blob.arrayBuffer())});
+    }
+    dl(makeZip(files),'Fotos_mit_Rahmen.zip'); status('ZIP gespeichert ('+files.length+' Bilder).');
+  }catch(e){status('Fehler: '+e.message)}
+  setBusy(false);
+};
+</script>
+</body>
+</html>

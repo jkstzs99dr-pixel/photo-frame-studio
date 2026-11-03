@@ -1,0 +1,20 @@
+# Erzeugte Testdateien
+tests/fixtures/out/
+
+# Echte Kameradateien nicht versehentlich committen
+*.ARW
+*.arw
+*.RAF
+*.raf
+*.NEF
+*.CR2
+*.DNG
+mit_rahmen/
+
+# Node / Build
+node_modules/
+dist/
+
+# System
+.DS_Store
+Thumbs.db
